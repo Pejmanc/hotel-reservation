@@ -7,4 +7,12 @@
     https://community.netlify.com/t/netlify-page-not-found-when-sharing-react-router-dom-based-links/11744/2
     File name: _redirects
     File content: /*    /index.html   200
-7. 
+7. Use react-router-dom to make different pages (npm install react-router-dom)
+    Go to https://reactrouter.com/web/guides/quick-start
+    Need to import:
+        index.js > import { BrowserRouter as Router } from "react-router-dom"; 
+            Wrap our app in <Router><App/></Router>
+        App.js > import { Switch, Route } from "react-router-dom";
+        Navbar.js > import { Link } from "react-router-dom";
+8. Import icons from https://react-icons.github.io/react-icons/    (npm react-icons --save)
+9. 
