@@ -7,8 +7,8 @@ const Error = () => {
   return (
     <>
       <Hero>
-        <Banner title="404 Error">
-          <Link to="/" hero="btn-primary">
+        <Banner title="404 Error" subtitle="The Page Not Found">
+          <Link to="/" className="btn-primary">
             Back to Home
           </Link>
         </Banner>
