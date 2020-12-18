@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Title from "../components/Title";
 import Service from "../components/Service";
 import services from "../components/ServicesData";
+import FeaturedRooms from "../components/FeaturedRooms";
 const Home = () => {
   return (
     <>
@@ -31,6 +32,7 @@ const Home = () => {
           })}
         </div>
       </section>
+      <FeaturedRooms />
     </>
   );
 };

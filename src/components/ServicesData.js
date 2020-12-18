@@ -28,7 +28,7 @@ const services = [
   {
     id: 4,
     logo: <FaShuttleVan />,
-    title: "Free Suttle Van",
+    title: "Free Shuttle Van",
     explanation:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quae.",
   },
