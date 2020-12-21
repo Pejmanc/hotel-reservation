@@ -7,7 +7,10 @@ export default function Rooms() {
   return (
     <>
       <Hero hero="roomsHero">
-        <Banner title="Rooms" subtitle="start from $200 per night">
+        <Banner
+          title="bars"
+          subtitle="Choose Your Favorit From Hundreds of Bars"
+        >
           <Link to="/" className="btn-primary">
             Back to Home
           </Link>

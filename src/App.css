@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #d4af37;
+  /* --primaryColor: #e92e93;
+  --secondaryColor: #30c7f2;
+  --darkColor: #122a4e;
+  --compOne: #ff7bac;
+  --compTwo: #1152c8; 
+  --compDark: #3f3d56*/
+
+  --primaryColor: #30c7f2;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBlack: #222;
+  --mainBlack: #3f3d56;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
@@ -94,7 +101,7 @@ h6 {
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: var(--offWhite);
+  background: #fff;
   z-index: 1;
 }
 .nav-header {
@@ -159,7 +166,9 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images/bartender-primarycolor.svg") right no-repeat;
+  /* background-attachment: fixed; */
+  background-position: 90% 50%;
   display: flex;
   align-items: center;
   justify-content: center;

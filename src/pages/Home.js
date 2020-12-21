@@ -10,9 +10,9 @@ const Home = () => {
   return (
     <>
       <Hero>
-        <Banner title="Luxurious Rooms" subtitle="Make Sure Visit All Rooms">
+        <Banner title="Liked Bars" subtitle="Choose The Best Bar in Your Area">
           <Link to="/rooms/" className="btn-primary">
-            Show Rooms
+            Show A Bar
           </Link>
         </Banner>
       </Hero>
