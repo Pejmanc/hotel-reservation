@@ -1,11 +1,34 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
+// const RoomContext = React.createContext();
+// class RoomProvider extends Component {
+//   state = {
+//     greeting: "hello",
+//     name: "Pejman",
+//   };
+//   render() {
+//     return (
+//       <RoomContext.Provider value={{ ...this.state }}>
+//         {this.props.children}
+//       </RoomContext.Provider>
+//     );
+//   }
+// }
+
+// const RoomConsumer = RoomContext.Consumer;
+// export { RoomProvider, RoomConsumer, RoomContext };
+
+import React, { Component } from "react";
 const RoomContext = React.createContext();
+
 class RoomProvider extends Component {
-  state = {};
+  state = {
+    greeting: "Hello",
+    name: "Pejman",
+  };
   render() {
     return (
-      <RoomContext.Provider value={"HELLO From Provider"}>
+      <RoomContext.Provider value={{ ...this.state }}>
         {this.props.children}
       </RoomContext.Provider>
     );
@@ -13,4 +36,4 @@ class RoomProvider extends Component {
 }
 
 const RoomConsumer = RoomContext.Consumer;
-export { RoomProvider, RoomConsumer, RoomContext };
+export { RoomContext, RoomProvider, RoomConsumer };
