@@ -1,11 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
+import { RoomContext } from "../context";
+import defaultBcn from "../images/room-1.jpeg";
+export default class SingleRoom extends Component {
+  constructor(props) {
+    super(props);
 
-const SingleRoom = () => {
-  return (
-    <div>
-      <h1>Single Room</h1>
-    </div>
-  );
-};
+    this.state = {
+      slug: this.props.match.params.slug,
+      defaultBcn,
+    };
+  }
+  static contextType = RoomContext;
 
-export default SingleRoom;
+  render() {
+    const { getRoom } = this.context;
+    const room = getRoom(this.state.slug);
+    const { name } = room;
+    return (
+      <div>
+        <h3>{name}</h3>
+      </div>
+    );
+  }
+}

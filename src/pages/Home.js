@@ -33,8 +33,9 @@ const Home = () => {
           })}
         </div>
       </section>
-      <FeaturedRooms />
-      <Loading />
+      <section className="featured-rooms">
+        <FeaturedRooms />
+      </section>
     </>
   );
 };
