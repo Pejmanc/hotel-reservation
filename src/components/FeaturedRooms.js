@@ -1,25 +1,25 @@
-import React, { Component } from "react";
-import { RoomContext } from "../context";
-import Title from "./Title";
-import Room from "./Room";
-import Loading from "./Loading";
-export default class FeaturedRooms extends Component {
-  static contextType = RoomContext;
+// import React, { Component } from "react";
+// import { RoomContext } from "../context";
+// import Title from "./Title";
+// import Room from "./Room";
+// import Loading from "./Loading";
+// export default class FeaturedRooms extends Component {
+//   static contextType = RoomContext;
 
-  render() {
-    const { loading, featuredRooms } = this.context;
-    const tempFeatureRooms = featuredRooms.map((featuredRoom) => (
-      <Room key={featuredRoom.id} room={featuredRoom} />
-    ));
+//   render() {
+//     const { loading, featuredRooms } = this.context;
+//     const tempFeatureRooms = featuredRooms.map((featuredRoom) => (
+//       <Room key={featuredRoom.id} room={featuredRoom} />
+//     ));
 
-    return (
-      <>
-        <Title title="Featured Rooms" />
-        <div>{loading ? <Loading /> : tempFeatureRooms}</div>
-      </>
-    );
-  }
-}
+//     return (
+//       <>
+//         <Title title="Featured Rooms" />
+//         <div>{loading ? <Loading /> : tempFeatureRooms}</div>
+//       </>
+//     );
+//   }
+// }
 
 //   static contextType = RoomContext;
 //   render() {
@@ -38,3 +38,24 @@ export default class FeaturedRooms extends Component {
 //     );
 //   }
 // }
+
+import React, { Component } from "react";
+import { RoomContext } from "../context";
+import Title from "./Title";
+import Loading from "./Loading";
+import Room from "./Room";
+export default class FeaturedRooms extends Component {
+  static contextType = RoomContext;
+  render() {
+    const { loading, featuredRooms } = this.context;
+    const tempFeaturedRooms = featuredRooms.map((featuredRoom) => (
+      <Room key={featuredRoom.id} room={featuredRoom} />
+    ));
+    return (
+      <section>
+        <Title title="Featured Rooms" />
+        {loading ? <Loading /> : tempFeaturedRooms}
+      </section>
+    );
+  }
+}
