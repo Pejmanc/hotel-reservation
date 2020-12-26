@@ -7,13 +7,17 @@ import Service from "../components/Service";
 import services from "../components/ServicesData";
 import FeaturedRooms from "../components/FeaturedRooms";
 import Loading from "../components/Loading";
+
 const Home = () => {
   return (
     <>
       <Hero>
-        <Banner title="Liked Bars" subtitle="Choose The Best Bar in Your Area">
+        <Banner
+          title="Luxurious Resort"
+          subtitle="Choose The Best Room in Your Favoite Area"
+        >
           <Link to="/rooms/" className="btn-primary">
-            Show A Bar
+            Show Rooms
           </Link>
         </Banner>
       </Hero>

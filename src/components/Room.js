@@ -1,4 +1,4 @@
-//Cards
+//Clickable Cards (Show Room)
 
 import React from "react";
 import defaultImg from "../images/room-1.jpeg";
