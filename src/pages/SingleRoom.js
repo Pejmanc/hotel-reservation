@@ -4,14 +4,14 @@ import defaultBcn from "../images/room-1.jpeg";
 export default class SingleRoom extends Component {
   static contextType = RoomContext;
 
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      // slug: this.props.match.params.slug,
-      defaultBcn,
-    };
-  }
+  //   this.state = {
+  //     // slug: this.props.match.params.slug,
+  //     defaultBcn,
+  //   };
+  // }
 
   render() {
     console.log(this.props);

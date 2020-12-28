@@ -13,6 +13,7 @@ class RoomProvider extends Component {
   componentDidMount() {
     let rooms = this.formatData(items);
     let featuredRooms = rooms.filter((room) => room.featured === true);
+
     this.setState({
       rooms,
       featuredRooms,
@@ -28,6 +29,7 @@ class RoomProvider extends Component {
       let room = { ...item.fields, images, id };
       return room;
     });
+
     return tempItems;
   }
 

@@ -51,6 +51,7 @@ export default class FeaturedRooms extends Component {
     const tempFeaturedRooms = featuredRooms.map((featuredRoom) => (
       <Room key={featuredRoom.id} room={featuredRoom} />
     ));
+
     return (
       <section>
         <Title title="Featured Rooms" />
