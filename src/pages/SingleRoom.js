@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { RoomContext } from "../context";
 import defaultBcn from "../images/room-1.jpeg";
-import Hero from "../components/Hero";
+import StyledHero from "../components/StyledHero";
 import Banner from "../components/Banner";
 
 export default class SingleRoom extends Component {
@@ -42,19 +42,53 @@ export default class SingleRoom extends Component {
       capacity,
       size,
       price,
-      exteras,
+      extras,
       breakfast,
       pets,
       images,
     } = room;
+    const [mainImage, ...restOfImages] = images;
     return (
-      <Hero hero="roomsHero">
-        <Banner title={`${name} Room`}>
-          <Link to="/rooms" className="btn-primary">
-            Back to Rooms
-          </Link>
-        </Banner>
-      </Hero>
+      <>
+        <StyledHero img={mainImage || defaultBcn}>
+          <Banner title={`${name} Room`}>
+            <Link to="/rooms" className="btn-primary">
+              Back to Rooms
+            </Link>
+          </Banner>
+        </StyledHero>
+        <section className="single-room">
+          <div className="single-room-images">
+            {restOfImages.map((item, index) => {
+              return <img key={index} src={item} alt={name} />;
+            })}
+          </div>
+          <div className="single-room-info">
+            <article className="desc">
+              <h3>Details</h3>
+              <p>{description}</p>
+            </article>
+            <article className="info">
+              <h3>Info</h3>
+              <h6>Price: ${price}</h6>
+              <h6>size: {size} SQft</h6>
+              <h6>
+                Max Capacity: {capacity} {capacity < 2 ? "person" : "people"}
+              </h6>
+              <h6>{pets ? "Pets Allowed" : "No Pets Allowed"}</h6>
+              <h6>{breakfast && "Free Breakfast Included"}</h6>
+            </article>
+          </div>
+        </section>
+        <section className="room-extras">
+          <h6>extras</h6>
+          <ul className="extras">
+            {extras.map((item, index) => {
+              return <li key={index}>- {item}</li>;
+            })}
+          </ul>
+        </section>
+      </>
     );
   }
 }
