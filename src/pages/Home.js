@@ -14,7 +14,7 @@ const Home = () => {
       <Hero>
         <Banner
           title="Luxurious Resort"
-          subtitle="Choose The Best Room in Your Favoite Area"
+          subtitle="Choose The Best Room in Your Favorite Area"
         >
           <Link to="/rooms/" className="btn-primary">
             Show Rooms
