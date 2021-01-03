@@ -1,7 +1,6 @@
 import React from "react";
 import { useContext } from "react";
 import { RoomContext } from "../context";
-import Title from "./Title";
 import Room from "./Room";
 
 export default function RoomList() {
