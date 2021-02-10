@@ -125,6 +125,8 @@ export default function RoomFilter() {
               />
               <label htmlFor="breakfast">breakfast</label>
             </div>
+            {/* End Of Breakfast */}
+
             <div className="single-extra">
               <input
                 type="checkbox"
